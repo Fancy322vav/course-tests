@@ -20,7 +20,7 @@ const CardBody = (props) => {
   };
 
   return (
-    <div className={`card-text ${props.cardInfo.checked ? "checked" : ""}`}>
+    <div>
       {cardInfo.isEdeting ? (
         <textarea
           className="text-form "
@@ -31,7 +31,7 @@ const CardBody = (props) => {
       ) : (
         <Link
           to={`/card/${cardInfo.id}`}
-          className={`card-text ${props.cardInfo.checked ? "checked" : ""}`}
+          className={`card-text ${cardInfo.checked ? "checked" : ""}`}
           onClick={clickLinkHandler}
         >
           {cardInfo.text}

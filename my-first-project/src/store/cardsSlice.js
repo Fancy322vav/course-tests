@@ -11,6 +11,8 @@ export const getCardsData = () => async (dispatch) => {
       id: data.Number,
       title: data.Name,
       text: data.About,
+      isEdeting: false,
+      checked: false,
     };
   });
   dispatch(cardsActions.setCardsData(transformedCardsData));

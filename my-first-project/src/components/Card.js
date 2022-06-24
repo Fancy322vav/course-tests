@@ -43,7 +43,7 @@ function Card(props) {
       );
     }
   };
-
+  console.log(cardInfo.checked);
   return (
     <div className={`card ${cardInfo.checked ? "checked" : ""}`}>
       <CardHeader
@@ -60,4 +60,5 @@ Card.propTypes = {
   cardInfo: PropTypes.object,
 };
 
-export default withLoadingDelay(Card);
+export default Card;
+//export default withLoadingDelay(Card);
