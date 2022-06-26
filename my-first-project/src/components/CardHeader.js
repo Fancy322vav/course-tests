@@ -48,19 +48,20 @@ const CardHeader = (props) => {
   }, [viewOnly, dispatch]);
 
   return (
-    <div className={`card-header ${cardInfo.checked ? "checked" : ""}`}>
+    <div data-testid="card-header" className={`card-header ${cardInfo.checked ? "checked" : ""}`}>
       {cardInfo.isEdeting ? (
         <div>
           <input
+            data-testid="input-field"
             className="title-form"
             type="text"
             defaultValue={cardInfo.title}
             onChange={userInputTitle}
           />
-          <button className="cancel-button-edit" onClick={clickCancel}>
+          <button data-testid="cancel-button-edit" className="cancel-button-edit" onClick={clickCancel}>
             <FcCancel size={22} />
           </button>
-          <button className="save-button-edit" onClick={clickSave}>
+          <button data-testid="save-button-edit" className="save-button-edit" onClick={clickSave}>
             <BsCheckLg size={20} />
           </button>
         </div>
@@ -74,13 +75,13 @@ const CardHeader = (props) => {
           {cardInfo.title}
           {!viewOnly ? (
             <div>
-              <button className="pencil-button" onClick={clickPencil}>
+              <button data-testid="pencil-button" className="pencil-button" onClick={clickPencil}>
                 <BsPencilSquare size={20} />
               </button>
-              <button className="cancel-button" onClick={clickCancel}>
+              <button data-testid="cancel-button" className="cancel-button" onClick={clickCancel}>
                 <FcCancel size={22} />
               </button>
-              <button className="save-button" onClick={clickSave}>
+              <button data-testid="save-button" className="save-button" onClick={clickSave}>
                 <BsCheckLg size={20} />
               </button>
             </div>

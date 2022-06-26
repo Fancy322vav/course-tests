@@ -43,9 +43,8 @@ function Card(props) {
       );
     }
   };
-  console.log(cardInfo.checked);
   return (
-    <div className={`card ${cardInfo.checked ? "checked" : ""}`}>
+    <div data-testid="card-component" className={`card ${cardInfo.checked ? "checked" : ""}`}>
       <CardHeader
         cardInfo={cardInfo}
         clickSave={clickSave}
